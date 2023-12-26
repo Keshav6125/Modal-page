@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000; 
+    width:100vw; height: 100vh;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.wrapper { width: 100vw;height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;}
+
+.circle1 {
+    position: fixed;top: 5%;left: 17%;width: 9em;height: 9em;
+    border-radius: 50%;box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869, #f46641);animation: circle1Animate 15s infinite;
+}
+@keyframes circle1Animate {
+    50% { left: 33%;top: 8%;scale: 1.41;}
+}
+
+.circle2 {
+    position: absolute;bottom: 12%;right: 12%;width: 11em;height: 11em;border-radius: 50%;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);animation: circle2Animate 12s infinite;
+}
+@keyframes circle2Animate {
+    50% { bottom: 3%;right: 41%; scale: 1.23;}
+}
+.circle3{
+    position: absolute;top: 7%;right: 17%;width: 14em;
+    height: 14em;border-radius: 50%;box-shadow: 0 0 50px #9ced66;
+    background: linear-gradient(-25deg, #37f143, #15f449);animation: circle3Animate 12s infinite;
+}
+@keyframes circle3Animate {
+    50% { top: 5%;right: 9%; scale: 1.1;}
+}
+.card-wrapper{
+border: 2px solid grey;
+height: 76%;
+width: 37%;
+position: absolute;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:flex-start;
+top: 50%;
+left: 50%;
+background-color:#ffffff1a;
+translate: -50% -50%;
+padding: 20px 50px;
+row-gap: 30px;
+backdrop-filter: blur(35px);border-radius: 15px;color: #ffffff;
+}
+.card-wrapper div img { border: 8px solid #ffffff30;width: 200px;height: 200px;border-radius: 50%; }
+
+.card-wrapper div img { border: 8px solid #ffffff30;width: 200px;height: 200px;border-radius: 50%; }
+
+.user-name h2 { font-size: 3rem;text-align: center;}
+
+.designation h3 { text-align: center;color: #ffffff85; font-size:1.9em; font-weight: 200px;}
+ 
+.bottom-group {display: flex;justify-content: space-between;gap: 12px; width: 100%; margin-top: 7%; width: 100%; height: 50px;}
+
+.btn-card{
+    font-size: larger;
+    display: flex;justify-content: center;align-items: center;gap: 11px;padding: 2px 8px;background: #ffffff00;
+    border: 3px solid #ffffffb9;text-transform: capitalize;border-radius: 15px;color: #ffffffb9;cursor: pointer;
+    width: 100%; height: 100%;
+}
+ 
+.btn-card:hover{
+    background-color: #ffffff;
+    transition: 0.99s;
+    color: #000;
+}
+.content { font-size: 15px; font-weight: 200px;}
+.icon-share i{ font-size: 40px;}
+
+.btn-card i{ font-size:18px;}
+
+.modal{
+    border: 8px solid #ffffff30;
+    color: white;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position:absolute;
+    border-radius: 35px;
+    backdrop-filter: blur(50px);
+    justify-content: center;
+    scale:0;
+    z-index: 20;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    border-bottom: 2px solid gray;
+    font-size: 22px;
+}
+.close{
+    font-size: 40px;
+    cursor: pointer;
+}
+.active {scale: 1;}
+.icon-counter {
+    margin-top: 30px;display: flex;justify-content: space-between;
+    align-items: center;flex-wrap: wrap; gap: 30px;
+}
+
+.icon{
+    border: 1px solid #ffffff88;padding: 16px;border-radius: 50%;width: 50px;
+    height: 50px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: all 1s;
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+#facebook { color: #1771e6;border: 1px solid #1771e6;}
+#facebook:hover { background-color: #1771e6;color: #fff;}
+#twitter { color: #1c99e6;border: 1px solid #1c99e6;}
+#twitter:hover { background-color: #1c99e6;color: #fff;}
+#whatsapp { color: #2fe664;border: 1px solid #2fe664;}
+#whatsapp:hover { background-color: #2fe664;color: #fff;}
+#telegram { color: #0081c2;border: 1px solid #0081c2;}
+#telegram:hover { background-color: #0081c2;color: #fff};
+#instagram { color: #cb2770;border: 1px solid #cb2770;}
+#instagram:hover { background-color: #cb2770;color: #fff;}
+.overlay {
+    position: absolute;background-color: #42454583;scale: 0;opacity:1;
+    pointer-events: auto;transition: 0.3s ease-in-out; z-index:10;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100%;
+}
+.overlayactive { scale: 1; pointer-events: auto; opacity: 0.9;}
+
+.modal h3{ font-size:32px; margin-top: 5%;}
+ 
+@media screen and (max-width:1052px) and (min-width:860px){
+    .card-wrapper{
+        width: 47%;
+        height: 80%;
+    }
+    .card-wrapper div img{
+        height: 180px;
+        width: 180px;
+    }
+    .user-name h2{
+        font-size:2.7em;
+    }
+    designation h3{
+        font-size: 1.5em;
+    }
+
+    .bottom-group {
+        flex-direction: column; gap: 14px;
+        margin-top: -1px;
+      }
+}
+ 
+@media screen and (max-width:861px) and (min-width:560px){
+    .circle1{height: 5rem; width:5rem; top: 9%; left:7%;}
+    .circle2{height: 8em; width: 8em; bottom:11%; right:20%;}
+    .circle3{height: 10em; width:10em; }
+    .card-wrapper{
+        width: 67%;
+        height: 80%;
+    }
+    .card-wrapper div img{
+        height: 180px;
+        width: 180px;
+    }
+    .user-name h2{
+        font-size:2.7em;
+    }
+    designation h3{
+        font-size: 1.5em;
+    }
+
+    .bottom-group {
+        flex-direction: column; gap: 14px;
+        margin-top: -1px;
+      }
+}
+ 
+@media screen and (max-width:561px) and (min-width:260px){
+    .circle1{height:15vw; width:15vw;}
+    .circle2{height:17vw; width:17vw;}
+    .circle3{height:21vw; width:21vw;}
+
+    .card-wrapper{
+        width: 67%;
+        height: 80%;
+    }
+    .card-wrapper div img{
+        height: 150px;
+        width: 150px;
+    }
+    .user-name h2{
+        font-size:2em;
+    }
+    designation h3{
+        font-size: 1.5em;
+    }
+
+    .bottom-group {
+        flex-direction: column; gap: 14px;
+        margin-top: 0px;
+      }
+}
+ 
+@media screen and (max-width:259px) and (min-width:10px){
+    .circle1{height:15vw; width:15vw;}
+    .circle2{height:17vw; width:17vw;}
+    .circle3{height:21vw; width:21vw;}
+
+    .card-wrapper{
+        width: 90%;
+        height: 80%;
+    }
+    .card-wrapper div img{
+        height: 100px;
+        width: 100px;
+    }
+    .user-name h2{
+        font-size:1.5em;
+    }
+    designation h3{
+        font-size: 0.5em;
+    }
+
+    .bottom-group {
+        flex-direction: column; gap: 14px;
+        margin-top: 0px;
+      }
+}
+ 
+
+ 
